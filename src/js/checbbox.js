@@ -79,12 +79,12 @@ $(document).ready(function () {
   ];
 
   renderTeam(courses, "#checkboxs");
-  // let check = 0;
-  // const listCate = ["KN", "DL", "DBT", "PPG"];
+
   const listCate = [];
 
   const listNode = document.getElementById("hello");
   const allCheckBox = document.querySelectorAll(".vehicle");
+
   for (var checkbox of allCheckBox) {
     checkbox.addEventListener("click", function () {
       if (this.checked === true) {
@@ -102,7 +102,7 @@ $(document).ready(function () {
   }
 });
 
-var resetCate = () => {
+const resetCate = () => {
   var getAllCate = document.querySelectorAll("#hello li");
   getAllCate.forEach((val) => {
     val.remove();
@@ -129,7 +129,7 @@ const renderCateOnSideBar = (list, listNode) => {
   });
 };
 
-function renderSideBar(check) {
+const renderSideBar = (check) => {
   const side = document.querySelector(".sidebar");
   const hbr = document.querySelector(".hambuger");
   const cate = document.querySelector(".listCate");
@@ -143,4 +143,4 @@ function renderSideBar(check) {
     hbr.style.display = "block";
     cate.style.display = "none";
   }
-}
+};
