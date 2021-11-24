@@ -93,7 +93,8 @@ $(document).ready(function () {
         renderCateOnSideBar(listCate, listNode);
       } else {
         resetCate();
-        var arr = listCate.filter((val) => val.value !== this.value);
+        var arr = listCate.findIndex((val) => val === this.value);
+        listCate.splice(arr, 1);
         renderSideBar(listCate);
         renderCateOnSideBar(listCate, listNode);
       }
